@@ -1,0 +1,58 @@
+{
+  "name": "telegram-custom-bot",
+  "version": "1.0.0",
+  "description": "A fully customizable Telegram bot with ranking system, media library, and moderation features",
+  "main": "scripts/run_all.py",
+  "scripts": {
+    "start": "python scripts/run_all.py",
+    "dev": "python scripts/run_all.py",
+    "setup": "./scripts/setup.sh",
+    "install-deps": "pip install -r requirements.txt",
+    "test": "echo 'No tests yet' && exit 0",
+    "deploy": "python scripts/run_all.py",
+    "backup": "python scripts/backup.py",
+    "docker:build": "docker build -t telegram-bot .",
+    "docker:run": "docker run -d --name telegram-bot --restart always telegram-bot"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "python",
+    "customizable",
+    "ranking",
+    "moderation",
+    "media",
+    "games",
+    "sqlite",
+    "aiosqlite"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/telegram-custom-bot.git"
+  },
+  "homepage": "https://github.com/yourusername/telegram-custom-bot#readme",
+  "bugs": {
+    "url": "https://github.com/yourusername/telegram-custom-bot/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0",
+    "python": ">=3.8.0"
+  },
+  "python": {
+    "dependencies": {
+      "python-telegram-bot": "20.7",
+      "apscheduler": "3.10.4",
+      "aiosqlite": "0.19.0",
+      "python-dotenv": "1.0.0"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "publishConfig": {
+    "access": "public"
+  }
+}
